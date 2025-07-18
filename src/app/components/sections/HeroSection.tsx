@@ -51,7 +51,7 @@ export default function HeroSection() {
       </div>
 
       {/* Hero Content (Centered) */}
-      <div className="relative z-10 flex flex-col items-start justify-between h-full px-4 text-white">
+      <div className="relative z-10 flex flex-col items-start justify-between h-full px-8 text-white">
         <div className="container w-full" ref={containerRef}>
           <h1 className="h1 text-5xl/loose md:text-7xl font-bold text-white mt-28 transition-opacity w-2xl">
             See Beyond. Unlock Your Health
@@ -94,7 +94,13 @@ export default function HeroSection() {
               Your body holds the answers
               <br /> — we help you see them.
             </h2>
-            <Button />
+            <Button
+              text="Join Waitlist"
+              imgSrc={"arrow-white.svg"}
+              bgColor={"bg-white"}
+              textColor={"text-black"}
+              bgImg={"bg-black"}
+            />
           </div>
         </div>
       </div>

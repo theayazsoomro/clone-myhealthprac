@@ -71,7 +71,13 @@ export default function Navbar() {
             </a>
           </li>
         </ul>
-        <Button />
+        <Button
+          text="Join Waitlist"
+          imgSrc={"arrow.svg"}
+          bgColor={"bg-black"}
+          textColor={"text-white"}
+          bgImg={"bg-white"}
+        />
       </div>
     </nav>
   );
