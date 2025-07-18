@@ -44,7 +44,6 @@ html::-webkit-scrollbar {
 }
 
 
-/* styles/globals.css */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -53,3 +52,10 @@ html::-webkit-scrollbar {
   scrollbar-width: none;
 }
 
+/* Enable scroll-snap */
+/* html {
+  scroll-snap-type: y mandatory;
+}
+section {
+  scroll-snap-align: start;
+} */
