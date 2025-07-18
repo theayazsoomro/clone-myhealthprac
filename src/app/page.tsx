@@ -1,3 +1,11 @@
+import Navbar from "./components/common/Navbar";
+import HeroSection from "./components/sections/HeroSection";
+
 export default function Home() {
-  return <h1>Hello Dev!</h1>;
+  return (
+    <main>
+      <Navbar />
+      <HeroSection />
+    </main>
+  );
 }
