@@ -20,7 +20,7 @@ export default function Hand() {
 
       {/* Right Text Section */}
       <div className="w-full lg:w-1/2 flex flex-col justify-between px-6 py-10 lg:py-16 lg:px-16 gap-6">
-        <div className="text-4xl sm:text-5xl lg:text-7xl font-bold text-[rgb(24,24,24)] leading-tight">
+        <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[rgb(24,24,24)] leading-tight">
           <AnimatedText text="Everyone. Everywhere" />
         </div>
 
