@@ -1,16 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import Button from "../common/Button";
+import { AnimatedText } from "@/app/components/common/AnimatedText";
 
 export default function HealthHub() {
   return (
     <div className="mainContainer w-full bg-gray-100 py-12 md:py-52">
       {/* 1st Section: Your Health Hub Reimagined */}
       <div className="flex flex-col justify-center items-center pb-24 md:pb-52">
-        <h2 className="w-11/12 md:w-6/12 text-2xl md:text-8xl font-bold text-center mb-8">
-          Your Health Hub Reimagined
-        </h2>
+        <div className="w-11/12 md:w-6/12 text-2xl md:text-8xl font-bold text-center mb-8">
+          <AnimatedText text="Your Health Hub Reimagined" />
+        </div>
         <p className="w-11/12 md:w-4/12 font-medium text-center mb-24 md:mb-52">
           MyHealthPrac brings together lab results, symptoms, and personalised
           insights in a single, easy-to-navigate dashboard. Track progress over
@@ -28,9 +31,9 @@ export default function HealthHub() {
       {/* 2nd Section: Designed for You. Built to Evolve with You */}
       <div className="w-full flex flex-col md:flex-row px-8 pb-18 md:pb-44 border-b-1 border-dashed border-[#c1c1c1]">
         <div className="md:w-6/12 h-[300px] md:sticky md:top-20">
-          <h2 className="text-2xl md:text-5xl font-medium w-11/12 md:w-8/12">
-            Designed for You. Built to Evolve with You
-          </h2>
+          <div className="text-2xl md:text-5xl font-medium w-11/12 md:w-8/12">
+            <AnimatedText text="Designed for You. Built to Evolve with You" />
+          </div>
           <p className="w-6/12 mt-6">
             Your data, your input, your pace — all in one place. Finally, care
             that fits how life actually works.
@@ -125,8 +128,8 @@ export default function HealthHub() {
         {/* Title Section */}
         <div>
           <h2 className="text-2xl md:text-6xl font-medium w-full md:w-8/12 mb-8">
-            From ADHD to Autoimmunity — We help you make sense of what&apos;s
-            happening and what to do next.
+            <AnimatedText text="From ADHD to Autoimmunity — We help you make sense of what&apos;s
+            happening and what to do next." />
           </h2>
           <Button
             text="Full List (Upcoming)"

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,6 +9,7 @@ import {
   faStarOfLife,
 } from "@fortawesome/free-solid-svg-icons";
 import Carousel from "../common/Carousel";
+import { AnimatedText } from "../common/AnimatedText";
 
 export default function CardsSection() {
   return (
@@ -30,10 +32,12 @@ export default function CardsSection() {
 
       {/* Headline */}
       <div className="w-full md:w-10/12">
-        <h2 className="text-3xl sm:text-5xl lg:text-7xl font-bold leading-tight">
-          A Predictive, Personalised Health Platform — for People and
-          Practitioners.
-        </h2>
+        <div className="text-3xl sm:text-5xl lg:text-7xl font-bold leading-tight">
+          <AnimatedText
+            text="A Predictive, Personalised Health Platform — for People and
+          Practitioners"
+          />
+        </div>
       </div>
 
       {/* Carousel */}
@@ -41,9 +45,9 @@ export default function CardsSection() {
 
       {/* Subheadline */}
       <div className="w-full md:w-7/12">
-        <h2 className="text-2xl sm:text-4xl lg:text-6xl font-semibold">
-          Anyone. Anywhere. 290+ markers, 160+ patterns.
-        </h2>
+        <div className="text-2xl sm:text-4xl lg:text-6xl font-semibold">
+          <AnimatedText text="Anyone. Anywhere. 290+ markers, 160+ patterns." />
+        </div>
       </div>
 
       {/* Cards */}

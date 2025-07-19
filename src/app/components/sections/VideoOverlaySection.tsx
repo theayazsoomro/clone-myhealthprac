@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBolt } from "@fortawesome/free-solid-svg-icons";
+import { AnimatedText } from "../common/AnimatedText";
 
 export default function VideoOverlaySection() {
   return (
@@ -21,10 +22,10 @@ export default function VideoOverlaySection() {
 
       {/* Content */}
       <div className="relative z-10">
-        <h2 className="text-2xl md:text-7xl text-white w-full md:w-8/12 pt-8 mb-28">
-          The most powerful health platform ever built, designed to evolve with
-          you
-        </h2>
+        <div className="text-2xl md:text-7xl text-white w-full md:w-8/12 pt-8 mb-28">
+          <AnimatedText text="The most powerful health platform ever built, designed to evolve with
+          you" />
+        </div>
         <div className="flex md:flex-nowrap flex-wrap gap-5 md:gap-0 content-center py-8 text-white border-gray-300 border-t-1 border-dashed">
           <div className="icon flex-0 md:flex-1/5 self-center">
             <FontAwesomeIcon

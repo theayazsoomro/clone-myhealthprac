@@ -6,6 +6,7 @@ import { splitText } from "motion-plus";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Tag from "../common/Tag";
+import { AnimatedText } from "../common/AnimatedText";
 
 export default function BloodTesting() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -50,9 +51,9 @@ export default function BloodTesting() {
       <div className="relative z-10 flex flex-col md:flex-row items-start justify-between h-full px-6 md:px-16 py-12 text-white gap-12">
         {/* Left Side */}
         <div ref={containerRef} className="w-full md:w-6/12 visibility-hidden">
-          <h1 className="text-2xl md:text-5xl font-bold w-full md:w-10/12">
+          <h2 className="text-2xl md:text-5xl font-bold w-full md:w-10/12">
             Choose what You need, when You need it
-          </h1>
+          </h2>
           <div className="flex flex-wrap gap-2 mt-5 w-full md:w-8/12">
             <Tag innerText="Practice Tools" />
             <Tag innerText="Guide" />
@@ -64,10 +65,10 @@ export default function BloodTesting() {
 
         {/* Right Side */}
         <div className="w-full md:w-6/12">
-          <h1 className="text-2xl md:text-6xl font-medium mb-6">
-            No matter who you&apos;re caring for — you&apos;re in the right
-            place
-          </h1>
+          <div className="text-2xl md:text-6xl font-medium mb-6">
+            <AnimatedText text="No matter who you&apos;re caring for — you&apos;re in the right
+            place" />
+          </div>
           <Button
             text="Join Waitlist"
             imgSrc={"arrow-white.svg"}
