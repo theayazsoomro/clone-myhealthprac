@@ -18,7 +18,7 @@ export default function NewsletterModal({ isOpen, onClose }: Props) {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-100 p-5 flex items-center justify-end bg-black/60 backdrop-blur-sm"
+          className="fixed h-screen inset-0 z-100 p-5 flex items-center justify-end bg-black/60 backdrop-blur-sm"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
