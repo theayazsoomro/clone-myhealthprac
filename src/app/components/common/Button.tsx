@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import NewsletterModal from "./NewsletterModal";
 
 interface ButtonProps {
   text: string;
@@ -19,11 +20,14 @@ export default function Button({
   imgSrc = "arrow.svg",
 }: ButtonProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
+    <>
     <button
-      className={`flex items-center gap-5 text-xs ps-5 pe-1 py-1 rounded-full ${bgColor} ${textColor} transition-all`}
+      className={`flex items-center gap-5 text-xs ps-5 pe-1 py-1 rounded-full ${bgColor} ${textColor} transition-all cursor-pointer`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={() => setOpen(true)}
     >
       <span>{text}</span>
       <Image
@@ -34,5 +38,7 @@ export default function Button({
         className={`p-3 ${bgImg} rounded-full`}
       />
     </button>
+      <NewsletterModal isOpen={open} onClose={() => setOpen(false)} />
+    </>
   );
 }
