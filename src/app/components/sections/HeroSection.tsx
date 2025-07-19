@@ -15,12 +15,10 @@ export default function HeroSection() {
     document.fonts.ready.then(() => {
       if (!containerRef.current) return;
 
-      // Hide the container until the fonts are loaded
       containerRef.current.style.visibility = "visible";
 
       const { words } = splitText(containerRef.current.querySelector("h1")!);
 
-      // Animate the words in the h1
       animate(
         words,
         { opacity: [0, 1], y: [10, 0] },
@@ -33,6 +31,7 @@ export default function HeroSection() {
       );
     });
   }, []);
+
   return (
     <section className="relative w-screen h-screen overflow-hidden">
       {/* Background Video with Dark Overlay */}
@@ -50,57 +49,69 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-black/10"></div>
       </div>
 
-      {/* Hero Content (Centered) */}
-      <div className="relative z-10 flex flex-col items-start justify-between h-full px-8 text-white">
-        <div className="container w-full" ref={containerRef}>
-          <h1 className="h1 text-5xl/loose md:text-7xl font-bold text-white mt-28 transition-opacity w-2xl">
+      {/* Hero Content */}
+      <div className="relative z-10 flex flex-col justify-between h-full px-6 md:px-8 py-10 text-white">
+        <div className="container max-w-6xl w-full" ref={containerRef}>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mt-24 md:mt-28 transition-opacity leading-tight max-w-5xl">
             See Beyond. Unlock Your Health
           </h1>
         </div>
-        <div className="w-full mb-8 flex">
-          <div className="w-6/12">
-            <ul>
-              <li className="flex items-center">
-                <FontAwesomeIcon icon={faChartPie} size="3x" className="pe-3" />
-                <span className="flex flex-col">
-                  <span className="font-bold">Real-Time Analysis</span>
-                  <span className="text-sm">
+
+        <div className="w-full mt-10 md:mt-0 mb-8 flex flex-col md:flex-row gap-10 max-w-6xl">
+          {/* Features */}
+          <div className="w-full md:w-1/2 space-y-6">
+            <ul className="space-y-6">
+              <li className="flex items-start gap-4">
+                <FontAwesomeIcon icon={faChartPie} size="2x" className="mt-1" />
+                <div className="flex flex-col">
+                  <span className="font-bold text-base md:text-lg">
+                    Real-Time Analysis
+                  </span>
+                  <span className="text-sm md:text-base">
                     Fast, actionable insights without long wait times.
                   </span>
-                </span>
+                </div>
               </li>
-              <li className="flex items-center my-8">
-                <FontAwesomeIcon icon={faChartPie} size="3x" className="pe-3" />
-                <span className="flex flex-col">
-                  <span className="font-bold">Real-Time Analysis</span>
-                  <span className="text-sm">
+              <li className="flex items-start gap-4">
+                <FontAwesomeIcon icon={faChartPie} size="2x" className="mt-1" />
+                <div className="flex flex-col">
+                  <span className="font-bold text-base md:text-lg">
+                    Real-Time Analysis
+                  </span>
+                  <span className="text-sm md:text-base">
                     Fast, actionable insights without long wait times.
                   </span>
-                </span>
+                </div>
               </li>
-              <li className="flex items-center">
-                <FontAwesomeIcon icon={faChartPie} size="3x" className="pe-3" />
-                <span className="flex flex-col">
-                  <span className="font-bold">Real-Time Analysis</span>
-                  <span className="text-sm">
+              <li className="flex items-start gap-4">
+                <FontAwesomeIcon icon={faChartPie} size="2x" className="mt-1" />
+                <div className="flex flex-col">
+                  <span className="font-bold text-base md:text-lg">
+                    Real-Time Analysis
+                  </span>
+                  <span className="text-sm md:text-base">
                     Fast, actionable insights without long wait times.
                   </span>
-                </span>
+                </div>
               </li>
             </ul>
           </div>
-          <div className="">
-            <h2 className="text-5xl mb-8">
+
+          {/* Heading + Button */}
+          <div className="w-full md:w-1/2 flex flex-col justify-between gap-6">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl leading-snug">
               Your body holds the answers
               <br /> — we help you see them.
             </h2>
-            <Button
-              text="Join Waitlist"
-              imgSrc={"arrow-white.svg"}
-              bgColor={"bg-white"}
-              textColor={"text-black"}
-              bgImg={"bg-black"}
-            />
+            <div>
+              <Button
+                text="Join Waitlist"
+                imgSrc={"arrow-white.svg"}
+                bgColor={"bg-white"}
+                textColor={"text-black"}
+                bgImg={"bg-black"}
+              />
+            </div>
           </div>
         </div>
       </div>

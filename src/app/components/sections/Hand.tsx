@@ -5,17 +5,30 @@ import Button from "../common/Button";
 
 export default function Hand() {
   return (
-    <div className="h-screen w-full bg-[rgb(184,162,133)] flex">
-      <div className="part-1 w-6/12">
-        <Image src="/images/hand.jpeg" width={300} height={300} alt="hand" className="w-full h-full object-cover" />
+    <div className="min-h-screen w-full bg-[rgb(184,162,133)] flex flex-col lg:flex-row">
+      {/* Left Image Section */}
+      <div className="w-full lg:w-1/2 h-64 lg:h-auto">
+        <Image
+          src="/images/hand.jpeg"
+          width={300}
+          height={300}
+          alt="hand"
+          className="w-full h-full object-cover"
+        />
       </div>
-      <div className="part-2 w-6/12 flex flex-col justify-between pt-12 pb-8 p-8">
-        <h2 className="text-8xl font-bol w-6/12 text-[rgb(24,24,24)]">Everyone. Everywhere.</h2>
+
+      {/* Right Text Section */}
+      <div className="w-full lg:w-1/2 flex flex-col justify-between px-6 py-10 lg:py-16 lg:px-16 gap-6">
+        <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-[rgb(24,24,24)] leading-tight">
+          Everyone. Everywhere.
+        </h2>
+
         <div>
-          <p className="text-5xl w-10/12 mb-5 text-[rgb(24,24,24)]">
+          <p className="text-lg sm:text-xl lg:text-3xl mb-6 text-[rgb(24,24,24)] leading-snug">
             Health shouldn&apos;t be limited by time, location, or income.
             Health should be in your hands.
           </p>
+
           <Button
             text="Join Waitlist"
             imgSrc={"arrow.svg"}

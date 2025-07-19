@@ -55,9 +55,10 @@ const cards = [
 
 export default function Carousel() {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-x-auto scrollbar-hide">
+      {/* Auto-scrolling on lg+, manual scroll on small devices */}
       <motion.div
-        className="flex w-max gap-6 px-4 "
+        className="flex gap-6 px-4 w-max lg:animate-scroll"
         initial={{ x: 0 }}
         animate={{ x: "-50%" }}
         transition={{
@@ -67,21 +68,23 @@ export default function Carousel() {
           duration: 20,
         }}
       >
-        {cards.map((card, index) => (
+        {cards.map((card) => (
           <div
-            key={index}
-            className="w-[500px] h-[680px] rounded-2xl shrink-0 bg-cover bg-center relative shadow-lg"
+            key={card.id}
+            className="w-[90vw] sm:w-[400px] lg:w-[500px] h-[400px] sm:h-[500px] lg:h-[680px] rounded-2xl shrink-0 bg-cover bg-center relative shadow-lg"
             style={{ backgroundImage: `url(${card.image})` }}
           >
             {/* Top Text */}
-            <div className="absolute top-4 left-4 text-white">
-              <p className="text-3xl font-bold">{card.value}</p>
-              <p className="text-sm uppercase">{card.label}</p>
-              <p className="text-xs">{card.unit}</p>
+            <div className="absolute top-4 left-4 text-white space-y-1">
+              <p className="text-xl sm:text-2xl lg:text-3xl font-bold">
+                {card.value}
+              </p>
+              <p className="text-xs sm:text-sm uppercase">{card.label}</p>
+              <p className="text-[10px] sm:text-xs">{card.unit}</p>
             </div>
 
             {/* Bottom Text */}
-            <div className="absolute bottom-4 left-4 right-4 text-white text-sm">
+            <div className="absolute bottom-4 left-4 right-4 text-white text-xs sm:text-sm">
               {card.desc}
             </div>
           </div>
