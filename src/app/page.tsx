@@ -9,6 +9,7 @@ import ChoosePlan from "./components/sections/ChoosePlan";
 import VideoOverlaySection from "./components/sections/VideoOverlaySection";
 import FAQsSection from "./components/sections/FAQs";
 import CTASection from "./components/sections/CTASection";
+import Footer from "./components/common/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <VideoOverlaySection />
       <FAQsSection />
       <CTASection />
+      <Footer />
     </main>
   );
 }
