@@ -1,12 +1,12 @@
 "use client"
-import { motion, Variants, useAnimation } from "framer-motion";
-import { JSX, ReactNode, useEffect } from "react";
+import { motion, useAnimation, Variants, DOMMotionComponents } from "framer-motion";
+import { ReactNode, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 type AnimatedTextProps = {
   text: string;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: keyof DOMMotionComponents;
   animationType?: "letters" | "words";
   staggerSpeed?: number;
   viewportMargin?: string;
@@ -61,7 +61,7 @@ export const AnimatedText = ({
     }
   }, [controls, inView]);
 
-  const MotionComponent = motion[as] as typeof motion.h2;
+  const MotionComponent = motion[as as keyof typeof motion] as React.ElementType;
 
   const textElements =
     animationType === "letters"
